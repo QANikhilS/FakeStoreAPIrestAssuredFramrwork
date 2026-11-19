@@ -1,0 +1,115 @@
+
+{
+  "addProductTestData": [
+    {
+      "testCaseId": "TC_001",
+      "scenario": "Valid product details",
+      "id": 0,
+      "title": "iPhone 16",
+      "price": 79999.99,
+      "description": "Apple iPhone 16 with 128GB storage",
+      "category": "Electronics",
+      "image": "https://example.com/iphone16.jpg",
+      "expectedStatusCode": 201
+    },
+    {
+      "testCaseId": "TC_002",
+      "scenario": "Product with minimum price",
+      "id": 0,
+      "title": "Pen",
+      "price": 0.1,
+      "description": "Blue ballpoint pen",
+      "category": "Stationery",
+      "image": "https://example.com/pen.jpg",
+      "expectedStatusCode": 201
+    },
+    {
+      "testCaseId": "TC_003",
+      "scenario": "Product with zero price",
+      "id": 0,
+      "title": "Free Product",
+      "price": 0,
+      "description": "Free sample product",
+      "category": "General",
+      "image": "https://example.com/free.jpg",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_004",
+      "scenario": "Product with negative price",
+      "id": 0,
+      "title": "Negative Price Product",
+      "price": -100,
+      "description": "Testing negative price",
+      "category": "Electronics",
+      "image": "https://example.com/product.jpg",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_005",
+      "scenario": "Product with empty title",
+      "id": 0,
+      "title": "",
+      "price": 100,
+      "description": "Product without title",
+      "category": "Electronics",
+      "image": "https://example.com/product.jpg",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_006",
+      "scenario": "Product with empty description",
+      "id": 0,
+      "title": "Test Product",
+      "price": 100,
+      "description": "",
+      "category": "Electronics",
+      "image": "https://example.com/product.jpg",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_007",
+      "scenario": "Product with empty category",
+      "id": 0,
+      "title": "Test Product",
+      "price": 100,
+      "description": "Test description",
+      "category": "",
+      "image": "https://example.com/product.jpg",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_008",
+      "scenario": "Product with invalid image URL",
+      "id": 0,
+      "title": "Test Product",
+      "price": 100,
+      "description": "Test description",
+      "category": "Electronics",
+      "image": "invalid-url",
+      "expectedStatusCode": 400
+    },
+    {
+      "testCaseId": "TC_009",
+      "scenario": "Product with special characters",
+      "id": 0,
+      "title": "Samsung Galaxy @#$",
+      "price": 49999.99,
+      "description": "Product with special characters !@#$%",
+      "category": "Electronics",
+      "image": "https://example.com/samsung.jpg",
+      "expectedStatusCode": 201
+    },
+    {
+      "testCaseId": "TC_010",
+      "scenario": "Product with very long title",
+      "id": 0,
+      "title": "This is a very long product title used for boundary testing of the API request payload",
+      "price": 1000,
+      "description": "Testing maximum title length",
+      "category": "Electronics",
+      "image": "https://example.com/product.jpg",
+      "expectedStatusCode": 400
+    }
+  ]
+}
